@@ -1,6 +1,6 @@
 #  :package: Floaty Navy Bar
 
-<img width="225" height="450" src="example/images/floaty.png?raw=true">
+<img src="example/images/floaty.png?raw=true">
 
 <img width="225" height="450" src="example/images/customizable_floaty.png?raw=true">
 
