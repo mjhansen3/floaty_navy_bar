@@ -10,3 +10,7 @@
 ## 1.0.2
 
 * Resolving broken screenshot image issues.
+
+## 1.0.3
+
+* Resolving broken screenshot image issues.

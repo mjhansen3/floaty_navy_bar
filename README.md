@@ -1,5 +1,5 @@
 #  :package: Floaty Navy Bar
-#  Version: 1.0.2
+#  Version: 1.0.3
 
 <img src="https://github.com/mjhansen3/floaty_navy_bar/raw/main/example/images/floaty.png">
 
