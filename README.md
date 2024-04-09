@@ -1,10 +1,10 @@
 #  :package: Floaty Navy Bar
 
-<img width="450" height="900" src="example/images/floaty.png.png?raw=true">
+<img width="250" height="700" src="example/images/floaty.png.png">
 
-<img width="450" height="900" src="example/images/customizable_floaty.png?raw=true">
+<img width="250" height="700" src="example/images/customizable_floaty.png?raw=true">
 
-<img width="450" height="900" src="example/images/dynamic_floaty.png.png?raw=true">
+<img width="250" height="700" src="example/images/dynamic_floaty.png.png">
 
 ## :computer: EXAMPLE
 
