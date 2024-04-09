@@ -1,5 +1,5 @@
 #  :package: Floaty Navy Bar
-#  Version: 0.0.1
+#  Version: 1.0.0
 
 <img src="example/images/floaty.png?raw=true">
 
