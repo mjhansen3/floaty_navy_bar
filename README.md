@@ -2,7 +2,7 @@
 
 <img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/new_fnb-3.png?raw=true">
 
-## :code: EXAMPLE
+## :computer: EXAMPLE
 
 ```dart
       Scaffold(
