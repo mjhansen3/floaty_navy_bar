@@ -1,4 +1,4 @@
-import 'package:floaty_navy_bar/utils/navy_bar_items.dart';
+import 'package:floaty_navy_bar/utils/navy_bar_item.dart';
 import 'package:flutter/material.dart';
 
 class FloatyNavyBar extends StatelessWidget {
@@ -19,7 +19,7 @@ class FloatyNavyBar extends StatelessWidget {
   final TextStyle? textStyle;
 
   /// * LIST OF TABS TO DISPLAY
-  final List<NavyBarItems> items;
+  final List<NavyBarItem> items;
 
   final ValueChanged<int> onChanged;
 

@@ -26,17 +26,17 @@
               indicatorHeight: 3,
               indicatorWidth: 14.0,
               items: [
-                NavyBarItems(
+                NavyBarItem(
                   icon: EvaIcons.homeOutline,
                 ),
-                NavyBarItems(
+                NavyBarItem(
                   icon: EvaIcons.search,
                   title: "Search",
                 ),
-                NavyBarItems(
+                NavyBarItem(
                   icon: EvaIcons.settingsOutline,
                 ),
-                NavyBarItems(
+                NavyBarItem(
                   icon: EvaIcons.personOutline,
                   title: "Profile",
                 ),

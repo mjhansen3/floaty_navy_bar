@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class NavyBarItems {
+class NavyBarItem {
   final IconData icon;
   final String? title;
 
-  NavyBarItems({
+  NavyBarItem({
     required this.icon,
     this.title,
   });
