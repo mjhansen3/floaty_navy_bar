@@ -1,6 +1,10 @@
 #  :package: Floaty Navy Bar
 
-<img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/new_fnb-3.png?raw=true">
+<img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/floaty.png?raw=true">
+
+<img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/customizable_floaty.png?raw=true">
+
+<img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/dynamic_floaty.png?raw=true">
 
 ## :computer: EXAMPLE
 
