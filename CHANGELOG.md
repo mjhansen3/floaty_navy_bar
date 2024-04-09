@@ -14,3 +14,7 @@
 ## 1.0.3
 
 * Resolving broken screenshot image issues.
+
+## 1.0.4
+
+* Made changes to example file.
