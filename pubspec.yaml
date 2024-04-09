@@ -1,6 +1,6 @@
 name: floaty_navy_bar
 description: A highly customizable and dynamic floating navigation bar. Use this for your Flutter apps where you need a bottom navigation bar. To achieve the desired floaty effect, avoid passing FloatyNavyBar() to the bottomNavigationBar property. See example or README.md on how to properly use the FloatyNavyBar.
-version: 0.0.5
+version: 0.0.1
 homepage: https://github.com/mjhansen3/floaty_navy_bar.git
 
 environment:
