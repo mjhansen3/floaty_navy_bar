@@ -50,15 +50,13 @@ class FloatyNavyBar extends StatelessWidget {
     this.indicatorHeight = 5.0,
     this.indicatorWidth = 8.0,
     this.itemWidth = 70,
-  }) : assert(
-    items.length > 1 && items.length < 5,
-    "\n******\n NavBarItems can't contain only 1 item and can't exceed 4 items \n******\n"
-  ),
-  assert(
-    indicatorWidth <= 15 || indicatorHeight <= 15,
-    "\n******\n Too much height given to tab indicator \n******\n",
-  ),
-  super(key: key);
+  })  : assert(items.length > 1 && items.length < 5,
+            "\n******\n NavBarItems can't contain only 1 item and can't exceed 4 items \n******\n"),
+        assert(
+          indicatorWidth <= 15 || indicatorHeight <= 15,
+          "\n******\n Too much height given to tab indicator \n******\n",
+        ),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +105,8 @@ class FloatyNavyBar extends StatelessWidget {
                           ),
                         ValueListenableBuilder(
                           valueListenable: notifyIndex,
-                          builder: (BuildContext context, int value, Widget? child) {
+                          builder:
+                              (BuildContext context, int value, Widget? child) {
                             return Visibility(
                               visible: value == i,
                               child: Container(
@@ -137,7 +136,8 @@ class FloatyNavyBar extends StatelessWidget {
   /// * FUNCTION TO DYNAMICALLY CALCULATE TOTAL WIDTH OF THE NAVBAR
   double calculateBarWidth() {
     double totalWidth = itemWidth * items.length; // TOTAL WIDTH WITH ALL ITEMS
-    double paddingWidth = 8.0 * (items.length - 1); // TOTAL WIDTH OF SPACING BETWEEN ITEMS
+    double paddingWidth =
+        8.0 * (items.length - 1); // TOTAL WIDTH OF SPACING BETWEEN ITEMS
     double totalBarWidth = totalWidth + paddingWidth; // TOTAL BAR WIDTH
 
     return totalBarWidth;

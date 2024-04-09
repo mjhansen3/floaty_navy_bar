@@ -1,11 +1,11 @@
 #  :package: Floaty Navy Bar
-#  Version: 1.0.0
+#  Version: 1.0.1
 
-<img src="example/images/floaty.png?raw=true">
+<img src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/floaty.png?raw=true">
 
-<img width="225" height="450" src="example/images/customizable_floaty.png?raw=true">
+<img width="225" height="450" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/customizable_floaty.png?raw=true">
 
-<img width="225" height="450" src="example/images/dynamic_floaty.png?raw=true">
+<img width="225" height="450" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/dynamic_floaty.png?raw=true">
 
 ## :computer: EXAMPLE
 
