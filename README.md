@@ -1,8 +1,8 @@
-#  Floaty Navy Bar
+#  :package: Floaty Navy Bar
 
 <img width="450" height="900" src="https://github.com/mjhansen3/floaty_navy_bar/blob/master/example/images/new_fnb-3.png?raw=true">
 
-## EXAMPLE
+## :code: EXAMPLE
 
 ```dart
       Scaffold(
@@ -26,17 +26,17 @@
               indicatorHeight: 3,
               indicatorWidth: 14.0,
               items: [
-                NavBarItems(
+                NavyBarItems(
                   icon: EvaIcons.homeOutline,
                 ),
-                NavBarItems(
+                NavyBarItems(
                   icon: EvaIcons.search,
                   title: "Search",
                 ),
-                NavBarItems(
+                NavyBarItems(
                   icon: EvaIcons.settingsOutline,
                 ),
-                NavBarItems(
+                NavyBarItems(
                   icon: EvaIcons.personOutline,
                   title: "Profile",
                 ),
