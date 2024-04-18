@@ -18,3 +18,8 @@
 ## 1.0.4
 
 * Made changes to example file.
+
+## 1.0.5
+
+* FloatyNavyBar is now hideable on scroll up.
+* Now with elevation effect.

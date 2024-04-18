@@ -1,6 +1,7 @@
 import 'package:floaty_navy_bar/utils/navy_bar_item.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class FloatyNavyBar extends StatelessWidget {
   /// * TO CHANGE THE HEIGHT OF NAVIGATION BAR
   /// * PREFERRED HEIGHT IS BETWEEN [70-100]
@@ -37,11 +38,17 @@ class FloatyNavyBar extends StatelessWidget {
   /// ! USING THIS TO SHOW AND HIDE TAB INDICATOR
   static ValueNotifier<int> notifyIndex = ValueNotifier<int>(0);
 
+  /// * FOR OFFSTAGING THE FLOATY NAVY BAR
+  final bool? offstage;
+  bool opacityAnimation = false;
+
   FloatyNavyBar({
     Key? key,
     required this.items,
     required this.onChanged,
     required this.barHeight,
+    required this.opacityAnimation,
+    this.offstage,
     this.iconColor,
     this.iconSize,
     this.textStyle,
@@ -66,62 +73,74 @@ class FloatyNavyBar extends StatelessWidget {
       bottom: 35.0,
       left: 0,
       right: 0,
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          height: barHeight,
-          width: barWidth,
-          padding: const EdgeInsets.all(5),
-          decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: List.generate(
-              items.length,
-              (i) => Flexible(
-                child: GestureDetector(
-                  onTap: () => onPressed(i),
-                  child: Container(
-                    width: itemWidth,
-                    color: Colors.transparent,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(
-                          items[i].icon,
-                          size: iconSize,
-                          color: iconColor,
-                        ),
-                        if (items[i].title != null)
-                          Text(
-                            items[i].title.toString(),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: textStyle,
+      child: AnimatedOpacity(
+        duration: Duration(milliseconds: 100),
+        opacity: opacityAnimation ? 1.0 : 0.0,
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: barHeight,
+            width: barWidth,
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(20.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 2,
+                  blurRadius: 6,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: List.generate(
+                items.length,
+                (i) => Flexible(
+                  child: GestureDetector(
+                    onTap: () => onPressed(i),
+                    child: Container(
+                      width: itemWidth,
+                      color: Colors.transparent,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Icon(
+                            items[i].icon,
+                            size: iconSize,
+                            color: iconColor,
                           ),
-                        ValueListenableBuilder(
-                          valueListenable: notifyIndex,
-                          builder:
-                              (BuildContext context, int value, Widget? child) {
-                            return Visibility(
-                              visible: value == i,
-                              child: Container(
-                                height: indicatorHeight,
-                                width: indicatorWidth,
-                                padding: EdgeInsets.zero,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  color: indicatorColor,
+                          if (items[i].title != null)
+                            Text(
+                              items[i].title.toString(),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: textStyle,
+                            ),
+                          ValueListenableBuilder(
+                            valueListenable: notifyIndex,
+                            builder:
+                                (BuildContext context, int value, Widget? child) {
+                              return Visibility(
+                                visible: value == i,
+                                child: Container(
+                                  height: indicatorHeight,
+                                  width: indicatorWidth,
+                                  padding: EdgeInsets.zero,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    color: indicatorColor,
+                                  ),
                                 ),
-                              ),
-                            );
-                          },
-                        )
-                      ],
+                              );
+                            },
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
